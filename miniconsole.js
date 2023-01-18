@@ -114,7 +114,8 @@ function start() {
         if (event.key === "Enter") {
             try {
                 console.log(windowElement.getElementsByTagName("input")[0].value);
-                console.log(eval(windowElement.getElementsByTagName("input")[0].value) + "");
+                // console.log(eval(windowElement.getElementsByTagName("input")[0].value) + "");
+                console.log(Function('"use strict";return (' + windowElement.getElementsByTagName("input")[0].value + ')')() + "");
             } catch (error) {
                 console.error(error);
             }
