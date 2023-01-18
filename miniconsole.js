@@ -42,6 +42,7 @@ windowTemplate =
         </span>
     </div>
 </span>`;
+
 // https://codepen.io/marcusparsons/pen/NMyzgR
 function makeDraggable(elmnt) {
     // Make an element draggable (or if it has a .window-top class, drag based on the .window-top element)
@@ -89,7 +90,6 @@ function makeDraggable(elmnt) {
         document.onmousemove = null;
     }
 }
-
 
 function start() {
     const parser = new DOMParser().parseFromString(windowTemplate, 'text/html').children[0].children[1].children[0];
